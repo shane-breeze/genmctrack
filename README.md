@@ -36,14 +36,14 @@ analyses.
 
 ## AOD
 
-The AOD (analysis object data) step generates analysis based derivates whilst
-slimming the FEVT results.
+The AOD (analysis object data) step runs the reconstruction software for
+analysis based physics objects as well as skimming from the FEVT.
 
 
 ## MINIAOD
 
 Further derivatives for analysis and slimming. Uses PAT (physics analysis tools)
-objects.
+objects for higher-level physics objects.
 
 
 ## NANOAOD
