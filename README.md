@@ -42,5 +42,12 @@ slimming the FEVT results.
 
 ## MINIAOD
 
+Further derivatives for analysis and slimming. Uses PAT (physics analysis tools)
+objects.
+
 
 ## NANOAOD
+
+Generates a ROOT file with only basic data types (and vectors of these) for
+each event. Very small size and convenient for quick investigations independent
+of CMSSW.
