@@ -16,14 +16,14 @@ scram b
 cd ../../
 seed=$(($(date +%s) % 100 + 1))
 cmsDriver.py Configuration/GenProduction/python/TSG-PhaseIITDRSpring19wmLHEGS-00030-fragment.py \
-        --fileout file:lhe.root \
-        --mc --eventcontent RAWSIM,LHE \
-        --customise SLHCUpgradeSimulations/Configuration/aging.customise_aging_1000,Configuration/DataProcessing/Utils.addMonitoring \
-        --datatier GEN-SIM,LHE --conditions 106X_upgrade2023_realistic_v2 --beamspot HLLHC14TeV --step LHE,GEN,SIM \
-        --nThreads 8 \
-        --geometry Extended2023D41 --era Phase2C8_timing_layer_bar \
-        --python_filename lhe_cfg.py \
-        --no_exec \
-        --customise_commands process.RandomNumberGeneratorService.externalLHEProducer.initialSeed="int(${seed})" \
-        -n 100 \
-        || exit $? ;
+    --fileout file:lhe.root \
+    --mc --eventcontent RAWSIM,LHE \
+    --customise SLHCUpgradeSimulations/Configuration/aging.customise_aging_1000,Configuration/DataProcessing/Utils.addMonitoring \
+    --datatier GEN-SIM,LHE --conditions 106X_upgrade2023_realistic_v2 --beamspot HLLHC14TeV --step LHE,GEN,SIM \
+    --nThreads 8 \
+    --geometry Extended2023D41 --era Phase2C8_timing_layer_bar \
+    --python_filename lhe_cfg.py \
+    --no_exec \
+    --customise_commands process.RandomNumberGeneratorService.externalLHEProducer.initialSeed="int(${seed})" \
+    -n 100 \
+    || exit $? ;

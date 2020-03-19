@@ -2,9 +2,9 @@
 export SCRAM_ARCH=slc7_amd64_gcc700
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 if [ -r CMSSW_10_6_0_patch2/src ] ; then
- echo release CMSSW_10_6_0_patch2 already exists
+    echo release CMSSW_10_6_0_patch2 already exists
 else
-scram p CMSSW CMSSW_10_6_0_patch2
+    scram p CMSSW CMSSW_10_6_0_patch2
 fi
 cd CMSSW_10_6_0_patch2/src
 eval `scram runtime -sh`
